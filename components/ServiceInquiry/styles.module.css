@@ -1,0 +1,62 @@
+.serviceInquiry {
+  width: 100%;
+  margin-bottom: var(--space-box);
+  margin-top: 48px;
+}
+
+.title {
+  font-size: var(--heading-2);
+  font-weight: 700;
+  margin-bottom: var(--space-md2);
+  color: var(--midnight-900);
+}
+
+.grid {
+  display: grid;
+  gap: var(--space-md2);
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  border: 1px solid var(--midnight-900);
+  padding: var(--space-md2) var(--space-md3);
+  text-decoration: none;
+  color: var(--midnight-900);
+  background: #fff;
+  transition: background 0.2s var(--cubic-bezier-primary);
+}
+
+.card:hover {
+  background-color: var(--gray-10);
+}
+
+.textGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.subText {
+  font-size: 14px;
+  color: var(--gray-400);
+  margin-top: var(--space-xsm2);
+}
+
+@media (min-width: 1023px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 745px) and (max-width: 1022px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 744px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

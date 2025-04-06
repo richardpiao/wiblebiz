@@ -1,0 +1,30 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.countText {
+  font-size: var(--heading-2);
+  font-weight: 700;
+  color: var(--midnight-900);
+}
+
+.resetButton {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xsm);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: var(--heading-4);
+  font-weight: 600;
+  color: var(--midnight-900);
+  padding: 0;
+}
+
+.resetButton img {
+  width: var(--ic-sm);
+  height: var(--ic-sm);
+}

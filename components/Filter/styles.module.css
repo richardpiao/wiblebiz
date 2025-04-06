@@ -1,0 +1,22 @@
+.tabContainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: var(--space-md3) 0;
+  border-bottom: 2px solid var(--midnight-900);
+}
+
+.tab {
+  font-size: var(--heading-4);
+  font-weight: 700;
+  cursor: pointer;
+  padding: var(--space-xsm) var(--space-md);
+  border-radius: 999px;
+  color: var(--midnight-900);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.active {
+  background-color: var(--midnight-900);
+  color: white;
+}

@@ -1,0 +1,28 @@
+.button {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 50;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  cursor: pointer;
+  border: none;
+  opacity: 1;
+  visibility: visible;
+}
+
+.atBottom {
+  bottom: 200px !important;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+}

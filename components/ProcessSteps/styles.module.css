@@ -1,0 +1,87 @@
+.processSteps {
+  width: 100%;
+  margin-bottom: var(--space-box);
+}
+
+.title {
+  font-size: var(--heading-2);
+  font-weight: 700;
+  margin-bottom: var(--space-md);
+  color: var(--midnight-900);
+}
+
+.steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-md);
+  position: relative;
+}
+
+.step {
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+
+.step:not(:first-child)::before {
+  content: url('/ic_step_arrow.svg');
+  position: absolute;
+  top: 50%;
+  left: -24px;
+  transform: translate(-50%);
+}
+
+.stepTitle {
+  font-weight: 700;
+  font-size: var(--heading-4);
+  margin: var(--space-xsm) 0 var(--space-xsm2);
+}
+
+.description {
+  margin-top: 8px;
+  font-size: 16px;
+  line-height: var(--line-height-md);
+}
+
+@media (max-width: 1022px) {
+  .steps {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .step {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .step img {
+    margin-right: var(--space-sm);
+    width: var(--ic-lg);
+    height: var(--ic-lg);
+  }
+
+  .step:not(:first-child)::before {
+    content: none;
+  }
+}
+
+@media (max-width: 745px) {
+  .title {
+    font-size: var(--h1-fsize-sm);
+  }
+
+  .stepTitle {
+    font-size: var(--heading-4);
+  }
+
+  .description {
+    font-size: var(--faq-list-a-size);
+  }
+}

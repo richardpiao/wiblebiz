@@ -1,0 +1,27 @@
+.tabContainer {
+  display: flex;
+  width: 100%;
+  margin-bottom: 48px;
+}
+
+.tab {
+  flex: 1;
+  text-align: center;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #05141f;
+  background-color: white;
+  cursor: pointer;
+  border: 1px solid #e5e7eb;
+  user-select: none;
+}
+
+.tab:not(:last-child) {
+  border-right: none;
+}
+
+.active {
+  background-color: #04111d;
+  color: white;
+}
