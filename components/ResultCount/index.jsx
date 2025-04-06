@@ -24,7 +24,7 @@ const ResultCount = ({ reset }) => {
     <div className={styles.header}>
       <p className={styles.countText}>검색결과 총 {total}건</p>
       <button className={styles.resetButton} onClick={handleReset}>
-        <Image src="/ic_init.svg" alt="icon" width={24} height={24} />
+        <Image src="/svg/ic_init.svg" alt="icon" width={24} height={24} />
         <span>검색초기화</span>
       </button>
     </div>

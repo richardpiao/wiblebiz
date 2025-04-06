@@ -27,7 +27,7 @@ export default function AccordionItem({ item, open, tab }) {
         </div>
 
         <Image
-          src="/ic_arrow.svg"
+          src="/svg/ic_arrow.svg"
           alt="화살표"
           className={`${styles.arrow} ${open ? styles.arrowOpen : ''}`}
           width={20}

@@ -60,7 +60,7 @@ export default function SearchResultBody({ initialResults }) {
   if (!hasResult) {
     return (
       <div className={styles.noResultBody}>
-        <Image src="/ic_nodata.svg" alt="정보없음" width={64} height={64} />
+        <Image src="/svg/ic_nodata.svg" alt="정보없음" width={64} height={64} />
         <p className={styles.paragraph}>검색결과가 없습니다.</p>
       </div>
     )

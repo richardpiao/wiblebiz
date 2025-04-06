@@ -42,7 +42,7 @@ export default function ScrollToTopButton() {
       aria-label="Scroll to top"
     >
       <Image
-        src="/ic_top.svg"
+        src="/svg/ic_top.svg"
         alt="Scroll to top"
         width={32}
         height={32}

@@ -7,7 +7,12 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles.desktop}>
         <div className={styles.left}>
-          <Image src="/logo_kia.svg" alt="KIA Logo" width={120} height={56} />
+          <Image
+            src="/svg/logo_kia.svg"
+            alt="KIA Logo"
+            width={120}
+            height={56}
+          />
           <p className={styles.copyright}>
             © 2023 KIA CORP. All Rights Reserved.
           </p>
@@ -43,7 +48,7 @@ export default function Footer() {
           <br />
           제휴문의: <Link href="mailto:kiabiz@kia.com">kiabiz@kia.com</Link>
         </p>
-        <Image src="/logo_kia.svg" alt="KIA Logo" width={120} height={56} />
+        <Image src="/svg/logo_kia.svg" alt="KIA Logo" width={120} height={56} />
         <p className={styles.copyright}>
           © 2023 KIA CORP. All Rights Reserved.
         </p>

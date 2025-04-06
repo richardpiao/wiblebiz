@@ -8,14 +8,19 @@ export default function ServiceInquiry() {
       <h2 className={styles.title}>서비스 문의</h2>
 
       <div className={styles.grid}>
-        <Link href="/kia.pdf" download className={styles.card}>
-          <Image src="/ic_download.svg" alt="Download" width={32} height={32} />
+        <a href="/pdf/kia.pdf" download className={styles.card}>
+          <Image
+            src="/svg/ic_download.svg"
+            alt="Download"
+            width={32}
+            height={32}
+          />
           <div className={styles.textGroup}>
             <strong>서비스 제안서 다운로드</strong>
           </div>
-        </Link>
+        </a>
         <Link href="https://wiblebiz.kia.com/Counsel" className={styles.card}>
-          <Image src="/ic_write.svg" alt="Write" width={32} height={32} />
+          <Image src="/svg/ic_write.svg" alt="Write" width={32} height={32} />
           <div className={styles.textGroup}>
             <strong>상담문의 등록하기</strong>
           </div>
@@ -27,7 +32,12 @@ export default function ServiceInquiry() {
           rel="noopener noreferrer"
           className={styles.card}
         >
-          <Image src="/ic_talk.svg" alt="KakaoTalk" width={32} height={32} />
+          <Image
+            src="/svg/ic_talk.svg"
+            alt="KakaoTalk"
+            width={32}
+            height={32}
+          />
           <div className={styles.textGroup}>
             <strong>카톡으로 문의하기</strong>
             <span className={styles.subText}>ID : 기아 비즈</span>

@@ -14,7 +14,7 @@ export default function AppBanner() {
           className={styles.button}
         >
           <Image
-            src="/logo_googleplay.svg"
+            src="/svg/logo_googleplay.svg"
             alt="Google Play"
             width={32}
             height={32}
@@ -29,7 +29,7 @@ export default function AppBanner() {
           className={styles.button}
         >
           <Image
-            src="/logo_appstore.svg"
+            src="/svg/logo_appstore.svg"
             alt="App Store"
             width={32}
             height={32}

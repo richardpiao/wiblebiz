@@ -50,7 +50,7 @@ const SearchBar = () => {
           {keyword && (
             <button className={styles.clearButton} onClick={handleClear}>
               <Image
-                src="/ic_clear.svg"
+                src="/svg/ic_clear.svg"
                 alt="clear"
                 className={styles.icon}
                 width={24}
@@ -60,7 +60,7 @@ const SearchBar = () => {
           )}
           <button className={styles.searchButton} onClick={handleSearch}>
             <Image
-              src="/ic_search.svg"
+              src="/svg/ic_search.svg"
               alt="search"
               className={styles.icon}
               width={32}

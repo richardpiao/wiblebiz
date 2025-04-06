@@ -32,10 +32,6 @@
   transition: color 0.3s var(--cubic-bezier-primary);
 }
 
-.navLink:hover {
-  color: var(--blue);
-}
-
 .toggleCheckbox {
   display: none;
 }

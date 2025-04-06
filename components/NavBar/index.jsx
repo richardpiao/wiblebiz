@@ -22,7 +22,7 @@ const NavBar = () => {
     <header className={styles.header}>
       <Link href="/" className={styles.logo}>
         <Image
-          src="/logo_kiabiz.svg"
+          src="/svg/logo_kiabiz.svg"
           alt="Kia Biz Logo"
           width={140}
           height={80}
