@@ -1,10 +1,11 @@
 'use client'
 
+import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import AccordionList from '../AccordionList'
 import Loadmore from '../Loadmore'
-import Image from 'next/image'
+import LoadingSpinner from '../LoadingSpinner'
 import { searchAction } from '@/lib/searchAction'
 import { appendFaqResults, setFaqResults } from '@/store/slices/faqSlice'
 import { updateSearchParam } from '@/store/slices/searchParamsSlice'
@@ -17,6 +18,7 @@ export default function SearchResultBody({ initialResults }) {
   const [items, setItems] = useState(initialResults.items || [])
   const [openItemId, setOpenItemId] = useState(null)
   const [pageInfo, setPageInfo] = useState(initialResults.pageInfo)
+  const [isLoading, setIsLoading] = useState(false)
 
   useEffect(() => {
     dispatch(setFaqResults(initialResults))
@@ -24,10 +26,12 @@ export default function SearchResultBody({ initialResults }) {
 
   useEffect(() => {
     const fetchUpdatedResults = async () => {
+      setIsLoading(true)
       const newResults = await searchAction(searchParams)
       dispatch(setFaqResults(newResults))
       setItems(newResults.items)
       setPageInfo(newResults.pageInfo)
+      setIsLoading(false)
     }
 
     fetchUpdatedResults()
@@ -35,7 +39,6 @@ export default function SearchResultBody({ initialResults }) {
 
   const handleLoadMore = async () => {
     const newOffset = searchParams.offset + searchParams.limit
-
     dispatch(updateSearchParam({ key: 'offset', value: newOffset }))
 
     const updatedParams = {
@@ -55,7 +58,20 @@ export default function SearchResultBody({ initialResults }) {
   }
 
   const hasResult = (pageInfo?.totalRecord ?? 0) > 0
-  const hasMore = pageInfo?.totalRecord > pageInfo.offset + pageInfo.limit
+
+  const hasMore =
+    pageInfo?.totalRecord != null &&
+    pageInfo?.offset != null &&
+    pageInfo?.limit != null &&
+    pageInfo.totalRecord > pageInfo.offset + pageInfo.limit
+
+  if (isLoading) {
+    return (
+      <div className={styles.loadingWrapper}>
+        <LoadingSpinner />
+      </div>
+    )
+  }
 
   if (!hasResult) {
     return (

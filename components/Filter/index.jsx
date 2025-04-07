@@ -19,7 +19,7 @@ const Filter = () => {
     categoryAction({ tab }).then((result) => {
       dispatch(setCategoryData({ categories: result.categories }))
     })
-  }, [tab, faqCategoryID])
+  }, [tab])
 
   const handleClick = (e) => {
     const value = e.currentTarget.dataset.value

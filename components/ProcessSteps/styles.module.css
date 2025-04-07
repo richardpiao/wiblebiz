@@ -28,7 +28,7 @@
 }
 
 .step:not(:first-child)::before {
-  content: url('/ic_step_arrow.svg');
+  content: url('/svg/ic_step_arrow.svg');
   position: absolute;
   top: 50%;
   left: -24px;
